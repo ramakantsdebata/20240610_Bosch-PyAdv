@@ -39,8 +39,19 @@ for val in tp:
 
 ret = iter(lst) # lstr.__iter__()  --> returns an iterator; So 'ret' is an iterator
 print(type(ret), ret)
+
+print("Val -->", next(ret))
+print("Val -->", next(ret))
+print("Val -->", next(ret))
+print("Val -->", next(ret))
+print("Val -->", next(ret))
+
+
+'''
 while True:
     try:
         print("Val -->", next(ret)) # next(ret) --> ret.__next__()
     except StopIteration as ex:
         break
+'''
+
