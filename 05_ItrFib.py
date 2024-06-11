@@ -20,4 +20,20 @@ class FibGen:
 for x in FibGen(10):
     print(x, end= ' ')
 
-print("All done")
+print("All done\n\n")
+
+
+# Create an object of FibGen
+# Get the iterator by using iter()
+# Create a while loop with the next() inside it.
+# Handle the StopIteration exception
+
+obj = FibGen(10)
+itr = iter(obj)
+
+try:
+    while True:
+        print(next(itr), end=' ')
+except StopIteration:
+    print("All Done")
+    
