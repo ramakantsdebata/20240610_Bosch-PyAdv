@@ -21,10 +21,11 @@ def greet():
 
 
 def addlogs(fn):
-    def wrapper():
+    def wrapper(*args, **kwArgs):
         print(f"'{fn.__name__}' called")
-        fn()
+        result = fn(*args, **kwArgs)
         print(f"'{fn.__name__}' returned")
+        return result
     return wrapper
 
 
@@ -40,8 +41,18 @@ def MentionOrg():
     print("Bosch")
 
 
+@addlogs
+def add(a, b):
+    return a+b
+
 ## Consumer code #############
 greet()
 # wrapper()
 
 MentionOrg()
+
+print(add(1, 2))
+
+
+
+
