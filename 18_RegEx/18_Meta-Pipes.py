@@ -9,8 +9,8 @@ string = "The Euro STOXX 600 index, which tracks all stock markets across Europe
 # if any of the patterns are matched, it should be successfully collected in to results
 # A | B | C
 
-res = re.search(r"\d{3}|\d{4}|\s[A-Z]{4}\s", string)
-# \d{3}     |     \d{4}     |      \s[A-Z]{4}\s
+res = re.search(r"\d{3}|\d{4}|\W[A-Z]{4}\W", string)
+# \d{3}     |     \d{4}     |      \W[A-Z]{4}\W
 print(res)
 
 res = re.search(r"\d{8}|\d{4}|\W[A-Z]{4}\W", string)
