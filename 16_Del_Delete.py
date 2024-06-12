@@ -47,19 +47,53 @@ class Test:
         self.y = 20
 
 def Test5():
+    # __dict__
     test = Test()
     print(test.__dict__)
     test.__dict__[0] = 100
     del test.__dict__['x']
     print(test.__dict__)
     
+def Test6():
+    # __dict__
+    test1 = Test()
+    test2 = Test()
+
+    test1.__dict__['z'] = 30
+    del test2.__dict__['x']
+    test2.a = 100
+    del test2.y
+    print(test1.__dict__)
+    print(test2.__dict__)
+
+class Rigid:
+    __slots__ = ['x', 'y']
+
+    def __init__(self) -> None:
+        self.x = 10
+        self.y = 20
+
+
+
+def Test7():
+    # __slots__
+    r1 = Rigid()
+    del r1.__slots__[0]
+    del r1.y
+    try:
+        r1.p = 100
+    except AttributeError as e:
+        print(f"{e!r}")
+    print(r1.__slots__)
 
 def Main():
     # Test1()
     # Test2()
     # Test3()
     # Test4()
-    Test5()
+    # Test5()
+    # Test6()
+    Test7()
     print("Last line")
 
 Main()
