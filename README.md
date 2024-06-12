@@ -1,6 +1,9 @@
 # 20240610_Bosch-PyAdv
 
 https://docs.python.org/3/library/operator.html
+https://docs.python.org/3/library/re.html#module-re
+https://docs.python.org/3/reference/lexical_analysis.html#lexical-analysis
+
 
 
 # Trainer details
