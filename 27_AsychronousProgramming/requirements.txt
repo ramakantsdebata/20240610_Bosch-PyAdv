@@ -2,3 +2,4 @@ Pillow
 pytest
 aiohttp
 aiofiles
+async_timeout
